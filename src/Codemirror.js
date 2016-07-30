@@ -24,7 +24,7 @@ const CodeMirror = React.createClass({
 	componentDidMount () {
 		const textareaNode = this.textarea;
 		const codeMirrorInstance = this.getCodeMirrorInstance();
-		this.codeMirror = codeMirrorInstance.fromTextArea(textareaNode.value, this.props.options);
+		this.codeMirror = codeMirrorInstance.fromTextArea(textareaNode, this.props.options);
 		this.codeMirror.on('change', this.codemirrorValueChanged);
 		this.codeMirror.on('focus', this.focusChanged.bind(this, true));
 		this.codeMirror.on('blur', this.focusChanged.bind(this, false));
