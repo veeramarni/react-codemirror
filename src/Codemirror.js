@@ -82,7 +82,7 @@ const CodeMirror = React.createClass({
 		);
 		return (
 			<div className={editorClassName}>
-        <textarea ref={(node) => this.textarea = node} name={this.props.path} defaultValue={this.props.value} autoComplete="off" />
+        <textarea ref={(ref) => this.textarea = ref} name={this.props.path} defaultValue={this.props.value} autoComplete="off" />
 			</div>
 		);
 	},
